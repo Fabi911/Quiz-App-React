@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --min-width: 400px;
+  --green__card: rgba(102, 75, 156, 0.7);
+  --bg__dark: rgb(45, 101, 46);
+  --bg__headerFooter: rgb(105, 75, 39);
+  --bg__light: linear-gradient(180deg, darkgray 50%, white);
+  --border__color: rgb(82, 92, 97);
+  --font_color_ligth: black;
+  --font_color_dark: white;
+  --border_size_hf: 1px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100%;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  background: var(--bg__dark);
+  min-width: var(--min-width);
+  color: var(--font_color_dark);
+}
+
+footer {
+  margin-left: 0;
+  position: fixed;
+  bottom: 0;
+  border-top: var(--border_size_hf) solid var(--border__color);
+  display: flex;
+  background-color: var(--bg__headerFooter);
+  height: auto;
+  width: 100%;
+  min-width: var(--min-width);
+  left: 0;
+  justify-content: center;
+}
+
+.light-mode {
+  background: var(--bg__light);
+  color: var(--font_color_ligth);
+}
+
+#light-button {
+  height: 18px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
